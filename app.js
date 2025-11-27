@@ -32,10 +32,20 @@ function restar() {
   actualizarUI();
 }
 
+// Sumar 1
+function sumar() {
+  let n = parseInt(numero, 10);
+  n = n + 1;
+
+  // Mantener ceros a la izquierda
+  numero = n.toString().padStart(11, "0");
+
+  actualizarUI();
+}
+
 // Copiar al portapapeles
 function copiar() {
   navigator.clipboard.writeText(numero)
-    .then(() => alert("Número copiado"))
     .catch(() => alert("Error al copiar"));
 }
 
